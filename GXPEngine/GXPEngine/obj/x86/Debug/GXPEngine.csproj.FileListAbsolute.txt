@@ -1,0 +1,24 @@
+Z:\Study\Saxion\1.2 Game Programming\GXPEngineShare\GXPEngine\bin\Debug\GXPEngine.exe
+Z:\Study\Saxion\1.2 Game Programming\GXPEngineShare\GXPEngine\bin\Debug\GXPEngine.pdb
+Z:\Study\Saxion\1.2 Game Programming\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.csprojAssemblyReference.cache
+Z:\Study\Saxion\1.2 Game Programming\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+Z:\Study\Saxion\1.2 Game Programming\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.exe
+Z:\Study\Saxion\1.2 Game Programming\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+Z:\Study\Saxion\1.2 Game Programming\MMM\GXPEngineShare\GXPEngine\bin\Debug\GXPEngine.exe
+Z:\Study\Saxion\1.2 Game Programming\MMM\GXPEngineShare\GXPEngine\bin\Debug\GXPEngine.pdb
+Z:\Study\Saxion\1.2 Game Programming\MMM\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.csprojAssemblyReference.cache
+Z:\Study\Saxion\1.2 Game Programming\MMM\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+Z:\Study\Saxion\1.2 Game Programming\MMM\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.exe
+Z:\Study\Saxion\1.2 Game Programming\MMM\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngineShare\GXPEngine\bin\Debug\GXPEngine.exe
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngineShare\GXPEngine\bin\Debug\GXPEngine.pdb
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.csprojAssemblyReference.cache
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.exe
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngineShare\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\bin\Debug\GXPEngine.exe
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\bin\Debug\GXPEngine.pdb
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.csprojAssemblyReference.cache
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.exe
+Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.pdb
