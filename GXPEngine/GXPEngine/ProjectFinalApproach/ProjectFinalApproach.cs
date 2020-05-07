@@ -98,8 +98,8 @@ public class ProjectFinalApproach : Game
 	void handleMainState()
 	{
 		_background = new Canvas("images/startScreen.png");
-		_background.SetOrigin(_background.width / 2, _background.height / 2);
-		_background.SetXY(width / 2, height / 2);
+		//_background.SetOrigin(_background.width / 2, _background.height / 2);
+		//_background.SetXY(width / 2, height / 2);
 		AddChild(_background);
 		
 	}

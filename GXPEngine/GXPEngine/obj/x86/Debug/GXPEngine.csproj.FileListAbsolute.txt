@@ -22,3 +22,9 @@ Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\obj\x86\Debug\GXP
 Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
 Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.exe
 Z:\Study\Saxion\1.4 Project Final Approach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+D:\Repositories\ProjectFinalApproach\GXPEngine\GXPEngine\bin\Debug\GXPEngine.exe
+D:\Repositories\ProjectFinalApproach\GXPEngine\GXPEngine\bin\Debug\GXPEngine.pdb
+D:\Repositories\ProjectFinalApproach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.csprojAssemblyReference.cache
+D:\Repositories\ProjectFinalApproach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+D:\Repositories\ProjectFinalApproach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.exe
+D:\Repositories\ProjectFinalApproach\GXPEngine\GXPEngine\obj\x86\Debug\GXPEngine.pdb
