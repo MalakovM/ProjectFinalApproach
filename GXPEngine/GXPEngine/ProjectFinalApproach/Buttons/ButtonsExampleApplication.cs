@@ -13,11 +13,11 @@ public class ButtonsExampleApplication : Game
     public ButtonsExampleApplication() : base(1280, 720, false)    
     {
         // Create example buttons
-        var exampleButton1 = new DefaultButton();
-        var exampleButton2 = new DefaultSoundButton();
-        var exampleButton3 = new SoundMirrorButton();
-        var exampleButton4 = new OutlineButton(Color.Green);
-        var exampleButton5 = new DefaultOutlineButton();
+        var exampleButton1 = new DefaultButton("images/default.png");
+        var exampleButton2 = new DefaultSoundButton("images/default_sound.png");
+        var exampleButton3 = new SoundMirrorButton("images/sound_mirror.png");
+        var exampleButton4 = new OutlineButton("images/outline.png", Color.Green);
+        var exampleButton5 = new DefaultOutlineButton("images/default_outline.png");
 
         // Set buttons position
         var gameHalfWidth = game.width * 0.5f;

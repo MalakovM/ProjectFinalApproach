@@ -3,12 +3,14 @@ using System.Drawing;
 using GXPEngine.Core;
 using System.Collections.Generic;
 using GXPEngine;
+using GXPEngine.ProjectFinalApproach;
 
 public class ProjectFinalApproach : Game
 {
 	bool isTurned;
 	Canvas _background;
 	private State _state;
+	DropdownMenu menu;
 	enum State
 	{
 		MAIN,
@@ -30,6 +32,7 @@ public class ProjectFinalApproach : Game
 	public ProjectFinalApproach() : base(1920, 1080, false, false)
 	{
 		setState(State.MAIN);
+		menu = new DropdownMenu("images/menuButton.png");
 	}
 
 
@@ -100,7 +103,7 @@ public class ProjectFinalApproach : Game
 		{
 			setState(State.QUADSINFO);
 		}
-		
+
 
 		if (Input.GetMouseButton(0) && Input.mouseX < 100 && Input.mouseX > 1 && Input.mouseY < 80 && Input.mouseY > 1 && isTurned == false)
 		{
@@ -129,7 +132,7 @@ public class ProjectFinalApproach : Game
 		//_background.SetOrigin(_background.width / 2, _background.height / 2);
 		//_background.SetXY(width / 2, height / 2);
 		AddChild(_background);
-
+		AddChild(menu);
 	}
 
 	void handleChestState()
@@ -137,6 +140,7 @@ public class ProjectFinalApproach : Game
 		_background.Destroy();
 		_background = new Canvas("images/chestActive.png");
 		AddChild(_background);
+		AddChild(menu);
 	}
 
 	void handleQuadsState()
@@ -144,6 +148,7 @@ public class ProjectFinalApproach : Game
 		_background.Destroy();
 		_background = new Canvas("images/quadsActive.png");
 		AddChild(_background);
+		AddChild(menu);
 	}
 
 	void handleQuadsInfo()
@@ -151,6 +156,7 @@ public class ProjectFinalApproach : Game
 		_background.Destroy();
 		_background = new Canvas("images/quadsInfo.png");
 		AddChild(_background);
+		AddChild(menu);
 	}
 
 	void handleMenu()
@@ -158,6 +164,7 @@ public class ProjectFinalApproach : Game
 		_background.Destroy();
 		_background = new Canvas("images/menuClicked.png");
 		AddChild(_background);
+		AddChild(menu);
 	}
 
 	void handleList()
@@ -165,6 +172,7 @@ public class ProjectFinalApproach : Game
 		_background.Destroy();
 		_background = new Canvas("images/exerciseList.png");
 		AddChild(_background);
+		AddChild(menu);
 	}
 
 	void handleBack()
@@ -173,11 +181,13 @@ public class ProjectFinalApproach : Game
 		_background = new Canvas("images/backView.png");
 		AddChild(_background);
 		isTurned = true;
+		AddChild(menu);
 	}
 
 	void handleAbdomen()
 	{
 		Console.WriteLine("Abdomen");
+		AddChild(menu);
 	}
 }
 	/*

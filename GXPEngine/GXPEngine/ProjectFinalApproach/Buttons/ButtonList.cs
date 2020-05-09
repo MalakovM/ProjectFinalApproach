@@ -11,7 +11,7 @@ namespace GXPEngine.ButtonsExampleApplication
         /// <summary>
         /// Provide button img path
         /// </summary>
-        public DefaultButton() : base("images/default.png")
+        public DefaultButton(string filePath) : base(filePath)
         {
 
         }
@@ -29,7 +29,7 @@ namespace GXPEngine.ButtonsExampleApplication
         /// <summary>
         /// Provide button img path
         /// </summary>
-        public DefaultSoundButton() : base("images/default_sound.png")
+        public DefaultSoundButton(string filePath) : base(filePath)
         {
 
         }
@@ -55,7 +55,7 @@ namespace GXPEngine.ButtonsExampleApplication
         /// <summary>
         /// Provide button img path
         /// </summary>
-        public SoundMirrorButton() : base("images/sound_mirror.png")
+        public SoundMirrorButton(string filePath) : base(filePath)
         {
 
         }
@@ -88,13 +88,13 @@ namespace GXPEngine.ButtonsExampleApplication
         private Canvas outline;
         private Color outlineColor = Color.Red;
 
-        public OutlineButton() : base("images/outline.png")
+        public OutlineButton(string filePath) : base(filePath)
         {
             outline = new Canvas(this.width, this.height);
             outline.SetOrigin(width * 0.5f, height * 0.5f);
             outline.graphics.DrawRectangle(new Pen(outlineColor, OUTLINE_WIDTH), 0, 0, outline.width, outline.height);
         }
-        public OutlineButton(Color outlineColor) : base("images/outline.png")
+        public OutlineButton(string filePath, Color outlineColor) : base(filePath)
         {
             this.outlineColor = outlineColor;
             outline = new Canvas(this.width, this.height);
@@ -123,13 +123,13 @@ namespace GXPEngine.ButtonsExampleApplication
         private Canvas outline;
         private Color outlineColor = Color.Red;
 
-        public DefaultOutlineButton() : base("images/default_outline.png")
+        public DefaultOutlineButton(string filePath) : base(filePath)
         {
             outline = new Canvas(this.width, this.height);
             outline.SetOrigin(width * 0.5f, height * 0.5f);
             outline.graphics.DrawRectangle(new Pen(outlineColor, OUTLINE_WIDTH), 0, 0, outline.width, outline.height);
         }
-        public DefaultOutlineButton(Color outlineColor) : base("images/outline.png")
+        public DefaultOutlineButton(string filePath, Color outlineColor) : base(filePath)
         {
             this.outlineColor = outlineColor;
             outline = new Canvas(this.width, this.height);
