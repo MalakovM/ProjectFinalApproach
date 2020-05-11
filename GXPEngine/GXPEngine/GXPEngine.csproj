@@ -39,7 +39,9 @@
     <Compile Include="ProjectFinalApproach\Buttons\Button.cs" />
     <Compile Include="ProjectFinalApproach\Buttons\ButtonList.cs" />
     <Compile Include="ProjectFinalApproach\Buttons\ButtonsExampleApplication.cs" />
+    <Compile Include="ProjectFinalApproach\ColorMapSprite.cs" />
     <Compile Include="ProjectFinalApproach\DropdownMenu.cs" />
+    <Compile Include="ProjectFinalApproach\MyApp.cs" />
     <Compile Include="ProjectFinalApproach\ProjectFinalApproach.cs" />
     <Compile Include="GXPEngine\Canvas.cs" />
     <Compile Include="GXPEngine\Game.cs" />
@@ -78,6 +80,8 @@
     <Compile Include="GXPEngine\FMOD\FMODSoundSystem.cs" />
     <Compile Include="GXPEngine\SoLoud\Soloud.cs" />
     <Compile Include="GXPEngine\SoLoud\SoloudSoundSystem.cs" />
+    <Compile Include="ProjectFinalApproach\Scene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\HomeScene.cs" />
   </ItemGroup>
   <ItemGroup />
 </Project>

@@ -68,10 +68,10 @@ public class ProjectFinalApproach : Game
 				break;
 		}
 	}
-	static void Main()
-	{
-		new ProjectFinalApproach().Start();
-	}
+	//static void Main()
+	//{
+	//	new ProjectFinalApproach().Start();
+	//}
 	void Update()
 	{
 		Controls();
@@ -190,21 +190,21 @@ public class ProjectFinalApproach : Game
 		AddChild(menu);
 	}
 }
-	/*
-	void pixelColour()
+/*
+void pixelColour()
+{
+	Color color = _background.texture.bitmap.GetPixel(100, 150);
+	if(color == Color.Blue)
 	{
-		Color color = _background.texture.bitmap.GetPixel(100, 150);
-		if(color == Color.Blue)
-		{
-			_background.Destroy();
-			_background = new Canvas("images/exerciseList.png");
-			AddChild(_background); 
-			_background.InverseTransformPoint(Input.mouseX, Input.mouseY)
-		}
-		//mySprite <yourCodeMySprite>
-		//.texture.bitmap.GetPixel(100, 200);
-		//return mySprite;
-
-		//return averageColor
+		_background.Destroy();
+		_background = new Canvas("images/exerciseList.png");
+		AddChild(_background); 
+		_background.InverseTransformPoint(Input.mouseX, Input.mouseY)
 	}
-	*/
+	//mySprite <yourCodeMySprite>
+	//.texture.bitmap.GetPixel(100, 200);
+	//return mySprite;
+
+	//return averageColor
+}
+*/
