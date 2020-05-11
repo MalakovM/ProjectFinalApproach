@@ -1,7 +1,4 @@
 using System;
-using System.Drawing;
-using GXPEngine.Core;
-using System.Collections.Generic;
 using GXPEngine;
 using GXPEngine.ProjectFinalApproach;
 

@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Runtime.InteropServices;
 
 namespace GXPEngine.ButtonsExampleApplication
 {
@@ -15,7 +14,6 @@ namespace GXPEngine.ButtonsExampleApplication
         {
 
         }
-        
     }
 
     /// <summary>
@@ -45,7 +43,7 @@ namespace GXPEngine.ButtonsExampleApplication
     }
 
     /// <summary>
-    /// Example of a button with default behavior and sound
+    /// Example of a mirrored button with sound
     /// </summary>
     public class SoundMirrorButton : Button
     {
@@ -83,17 +81,28 @@ namespace GXPEngine.ButtonsExampleApplication
     /// </summary>
     public class OutlineButton : Button
     {
-        //
-        private const int OUTLINE_WIDTH = 5;
         private Canvas outline;
+
+        // Width of the outline, default outline color
+        private const int OUTLINE_WIDTH = 5;
         private Color outlineColor = Color.Red;
 
+        /// <summary>
+        /// Provide button filepath, draw outline
+        /// </summary>
+        /// /// <param name="filePath"> Button filepath </param>
         public OutlineButton(string filePath) : base(filePath)
         {
             outline = new Canvas(this.width, this.height);
             outline.SetOrigin(width * 0.5f, height * 0.5f);
             outline.graphics.DrawRectangle(new Pen(outlineColor, OUTLINE_WIDTH), 0, 0, outline.width, outline.height);
         }
+
+        /// <summary>
+        /// Provide button filepath, set outline color, draw outline
+        /// </summary>
+        /// <param name="filePath"> Button filepath </param>
+        /// <param name="outlineColor"> Color of the outline </param>
         public OutlineButton(string filePath, Color outlineColor) : base(filePath)
         {
             this.outlineColor = outlineColor;
@@ -102,12 +111,18 @@ namespace GXPEngine.ButtonsExampleApplication
             outline.graphics.DrawRectangle(new Pen(outlineColor, OUTLINE_WIDTH), 0, 0, outline.width, outline.height);
         }
 
+        /// <summary>
+        /// Add outline to Game on mouse hover
+        /// </summary>
         protected override void onMouseHover()
         {
             AddChild(outline);
 
         }
 
+        /// <summary>
+        /// Remove outline from Game on mouse unhover
+        /// </summary>
         protected override void onMouseUnhover()
         {
             RemoveChild(outline);
@@ -119,16 +134,28 @@ namespace GXPEngine.ButtonsExampleApplication
     /// </summary>
     public class DefaultOutlineButton : Button
     {
-        private const int OUTLINE_WIDTH = 5;
         private Canvas outline;
+
+        // Outline width, default outline color
+        private const int OUTLINE_WIDTH = 5;
         private Color outlineColor = Color.Red;
 
+        /// <summary>
+        /// Provide button filepath, draw outline
+        /// </summary>
+        /// <param name="filePath"> Button filepath </param>
         public DefaultOutlineButton(string filePath) : base(filePath)
         {
             outline = new Canvas(this.width, this.height);
             outline.SetOrigin(width * 0.5f, height * 0.5f);
             outline.graphics.DrawRectangle(new Pen(outlineColor, OUTLINE_WIDTH), 0, 0, outline.width, outline.height);
         }
+
+        /// <summary>
+        /// Provide button filepath, set outline color, draw outline
+        /// </summary>
+        /// <param name="filePath"> Button filepath </param>
+        /// <param name="outlineColor"> Color of the outline </param>
         public DefaultOutlineButton(string filePath, Color outlineColor) : base(filePath)
         {
             this.outlineColor = outlineColor;
@@ -137,13 +164,18 @@ namespace GXPEngine.ButtonsExampleApplication
             outline.graphics.DrawRectangle(new Pen(outlineColor, OUTLINE_WIDTH), 0, 0, outline.width, outline.height);
         }
 
+        /// <summary>
+        /// Execute default hover handling and add outline to Game
+        /// </summary>
         protected override void onMouseHover()
         {
             base.onMouseHover();
             AddChild(outline);
 
         }
-
+        /// <summary>
+        /// Unhover, remove outline 
+        /// </summary>
         protected override void onMouseUnhover()
         {
             base.onMouseUnhover();
