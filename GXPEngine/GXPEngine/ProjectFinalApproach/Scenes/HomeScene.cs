@@ -10,7 +10,7 @@ namespace GXPEngine.ProjectFinalApproach.Scenes
         public HomeScene() : base()
         {
             DropdownMenu menu = new DropdownMenu("images/menuButton.png");
-            ColorMapSprite background = new ColorMapSprite("images/slayer.png", "images/lookup_map.png");
+            ColorMapSprite background = new ColorMapSprite("images/startScreen.png", "images/frontColorMap.png");
 
             objects.Add(background);
             objects.Add(menu);

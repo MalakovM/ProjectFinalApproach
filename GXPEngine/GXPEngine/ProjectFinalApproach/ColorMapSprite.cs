@@ -38,9 +38,13 @@ namespace GXPEngine.ProjectFinalApproach
 
 			//create lookup map for all your values		
 			//eye dropper in photoshop, right click, copy color hex code, and add 0x in front
-			lookupMap[0x3dff23] = "Armored helmet";
-			lookupMap[0x0000ff] = "Metal breastplate";
-			lookupMap[0xfff113] = "Armored leg plates";
+			lookupMap[0xff0000] = "Chest";
+			lookupMap[0x00ff00] = "Abdomen";
+			lookupMap[0x0000ff] = "Biceps";
+			lookupMap[0x00ffff] = "Forearms";
+			lookupMap[0xffff00] = "Quads";
+			lookupMap[0xff00ff] = "Shoulders";
+
 		}
 
 
