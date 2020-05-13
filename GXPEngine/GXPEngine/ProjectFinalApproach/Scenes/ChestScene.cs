@@ -1,20 +1,18 @@
-﻿using GXPEngine.ButtonsExampleApplication;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using GXPEngine.ButtonsExampleApplication;
 
 namespace GXPEngine.ProjectFinalApproach.Scenes
 {
-    /// <summary>
-    /// Home page scene
-    /// </summary>
-    public class HomeScene : Scene
+    class ChestScene : Scene
     {
-        /// <summary>
-        /// Set scene content, add it to objects list
-        /// </summary>
-        public HomeScene() : base()
+        public ChestScene() : base()
         {
             // Set scene content
             DropdownMenu menu = new DropdownMenu("images/menuButton.png");
-            ColorMapSprite background = new ColorMapSprite("images/startScreen.png", "images/frontColorMap.png");
+            ColorMapSprite background = new ColorMapSprite("images/chestActive.png", "images/frontColorMap.png");
             ChangeViewButton changeViewButton = new ChangeViewButton("images/changeViewButton.png");
             changeViewButton.SetXY(1000, 600);
 

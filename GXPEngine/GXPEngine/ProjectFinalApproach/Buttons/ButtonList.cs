@@ -1,4 +1,6 @@
 ﻿using System.Drawing;
+using System;
+using GXPEngine.ProjectFinalApproach;
 
 namespace GXPEngine.ButtonsExampleApplication
 {
@@ -23,22 +25,24 @@ namespace GXPEngine.ButtonsExampleApplication
     {
         // Button hover sound
         Sound sound = new Sound("sfx/dirt.wav");
-
         /// <summary>
         /// Provide button img path
         /// </summary>
         public DefaultSoundButton(string filePath) : base(filePath)
         {
-
         }
 
         /// <summary>
         /// Execute default hover handling and play sound
         /// </summary>
-        protected override void onMouseHover()
+        protected override void onMouseDown()
         {
             base.onMouseHover();
             sound.Play();
+        }
+
+        protected override void onMouseUp()
+        {
         }
     }
 
@@ -181,6 +185,40 @@ namespace GXPEngine.ButtonsExampleApplication
             base.onMouseUnhover();
             RemoveChild(outline);
 
+        }
+
+        
+    }
+    public class ChangeViewButton : Button
+    {
+        // Button hover sound
+        Sound sound = new Sound("sfx/dirt.wav");
+        /// <summary>
+        /// Provide button img path
+        /// </summary>
+        public ChangeViewButton(string filePath) : base(filePath)
+        {
+        }
+
+        protected override void onMouseDown()
+        {
+            base.onMouseDown();
+            sound.Play();
+        }
+
+        protected override void onMouseUp()
+        {
+            base.onMouseUp();
+            if (!MyApp.turned)
+            {
+                MyApp.turned = true;
+                MyApp.state = "Main";
+            }
+            else
+            {
+                MyApp.turned = false;
+                MyApp.state = "Main";
+            }
         }
     }
 }

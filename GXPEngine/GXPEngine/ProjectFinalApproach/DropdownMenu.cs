@@ -71,6 +71,7 @@ namespace GXPEngine.ProjectFinalApproach
         /// </summary>
         protected override void onMouseDown()
         {
+            base.onMouseDown();
             if (!droppedDown) DropMenu();
             else
             {

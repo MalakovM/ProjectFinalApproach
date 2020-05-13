@@ -81,6 +81,9 @@
     <Compile Include="GXPEngine\SoLoud\Soloud.cs" />
     <Compile Include="GXPEngine\SoLoud\SoloudSoundSystem.cs" />
     <Compile Include="ProjectFinalApproach\Scene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\BackScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\ChestInfoScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\ChestScene.cs" />
     <Compile Include="ProjectFinalApproach\Scenes\HomeScene.cs" />
   </ItemGroup>
   <ItemGroup />

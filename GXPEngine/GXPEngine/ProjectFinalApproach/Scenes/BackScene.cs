@@ -5,16 +5,16 @@ namespace GXPEngine.ProjectFinalApproach.Scenes
     /// <summary>
     /// Home page scene
     /// </summary>
-    public class HomeScene : Scene
+    public class BackScene : Scene
     {
         /// <summary>
         /// Set scene content, add it to objects list
         /// </summary>
-        public HomeScene() : base()
+        public BackScene() : base()
         {
             // Set scene content
             DropdownMenu menu = new DropdownMenu("images/menuButton.png");
-            ColorMapSprite background = new ColorMapSprite("images/startScreen.png", "images/frontColorMap.png");
+            ColorMapSprite background = new ColorMapSprite("images/backScreen.png", "images/frontColorMap.png");
             ChangeViewButton changeViewButton = new ChangeViewButton("images/changeViewButton.png");
             changeViewButton.SetXY(1000, 600);
 

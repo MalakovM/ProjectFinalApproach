@@ -12,7 +12,8 @@
         // Flag
         private bool hovered = false;
         // Scales intencity of the default button hover effect
-        private float hoverScale = 0.99f;
+        private float hoverScale = 0.98f;
+
         /// <summary>
         /// Button constructor
         /// </summary>
@@ -31,7 +32,7 @@
         protected virtual void onMouseHover()
         {
             // Scale button down
-            SetScaleXY(hoverScale, hoverScale);
+            
         }
 
         /// <summary>
@@ -40,7 +41,7 @@
         protected virtual void onMouseUnhover()
         {
             // Scale button up
-            SetScaleXY(1, 1);
+            
         }
 
         /// <summary>
@@ -48,6 +49,7 @@
         /// </summary>
         protected virtual void onMouseDown()
         {
+            SetScaleXY(hoverScale, hoverScale);
         }
 
         /// <summary>
@@ -55,6 +57,7 @@
         /// </summary>
         protected virtual void onMouseUp()
         {
+            SetScaleXY(1, 1);
         }
 
         #endregion Virtual functions

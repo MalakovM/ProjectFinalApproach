@@ -1,4 +1,4 @@
-using GXPEngine;	
+using GXPEngine;
 using GXPEngine.ButtonsExampleApplication;
 using System.Drawing;
 
@@ -10,7 +10,7 @@ public class ButtonsExampleApplication : Game
     /// <summary>
     /// Init window and add example buttons
     /// </summary>
-    public ButtonsExampleApplication() : base(1280, 720, false)    
+    public ButtonsExampleApplication() : base(1280, 720, false)
     {
         // Create example buttons
         var exampleButton1 = new DefaultButton("images/default.png");
@@ -39,8 +39,8 @@ public class ButtonsExampleApplication : Game
     /// <summary>
     /// Start ButtonsExampleApplication
     /// </summary>
-//    static void Main()                          
-//    {
-//        new ButtonsExampleApplication().Start();                  
-//    }
+    //static void Main()
+    //{
+    //    new ButtonsExampleApplication().Start();
+    //}
 }

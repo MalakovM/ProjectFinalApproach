@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace GXPEngine.ProjectFinalApproach
 {
-    public class ColorMapSprite : Sprite
+	public class ColorMapSprite : Sprite
 	{
 		//static void Main()
 		//{
@@ -64,13 +64,21 @@ namespace GXPEngine.ProjectFinalApproach
 				if (lookupMap.ContainsKey(lookupColor))
 				{
 					_text.Text("Info:" + lookupMap[lookupColor], 0, 0);
+
+					MyApp.state = lookupMap[lookupColor];
+
+					if (Input.GetMouseButtonUp(0))
+					{
+						MyApp.state = lookupMap[lookupColor]+"Info";
+
+					}
 				}
+				else MyApp.state = "Main";
+
 			}
+
 		}
 
-
 	}
-
-
 }
 
