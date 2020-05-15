@@ -12,9 +12,15 @@ namespace GXPEngine.ButtonsExampleApplication
         /// <summary>
         /// Provide button img path
         /// </summary>
+        Sound sound = new Sound("sfx/dirt.wav");
         public DefaultButton(string filePath) : base(filePath)
         {
 
+        }
+        protected override void onMouseDown()
+        {
+            base.onMouseDown();
+            sound.Play();
         }
     }
 
@@ -68,7 +74,7 @@ namespace GXPEngine.ButtonsExampleApplication
         protected override void onMouseHover()
         {
             sound.Play();
-            SetScaleXY(-1 , 1);
+            SetScaleXY(-1, 1);
         }
 
         /// <summary>
@@ -76,7 +82,7 @@ namespace GXPEngine.ButtonsExampleApplication
         /// </summary>
         protected override void onMouseUnhover()
         {
-            SetScaleXY(1 , 1);
+            SetScaleXY(1, 1);
         }
     }
 
@@ -187,7 +193,7 @@ namespace GXPEngine.ButtonsExampleApplication
 
         }
 
-        
+
     }
     public class ChangeViewButton : Button
     {
@@ -209,17 +215,139 @@ namespace GXPEngine.ButtonsExampleApplication
         protected override void onMouseUp()
         {
             base.onMouseUp();
-            if (!MyApp.turned)
+            if (!MyApp.instance.turned)
             {
-                MyApp.turned = true;
-                MyApp.state = "Main";
+                MyApp.instance.turned = true;
+                MyApp.instance.type = Type.Front;
             }
             else
             {
-                MyApp.turned = false;
-                MyApp.state = "Main";
+                MyApp.instance.turned = false;
+                MyApp.instance.type = Type.Back;
             }
+            MyApp.instance.SetState(State.Main);
         }
     }
+    public class ExitButton : Button
+    {
+        // Button hover sound
+        Sound sound = new Sound("sfx/dirt.wav");
+        /// <summary>
+        /// Provide button img path
+        /// </summary>
+        public ExitButton(string filePath) : base(filePath)
+        {
+        }
+        protected override void onMouseUp()
+        {
+            MyApp.instance.Destroy();
+        }
+    }
+    public class BodyButton : Button
+    {
+        // Button hover sound
+        Sound sound = new Sound("sfx/dirt.wav");
+        /// <summary>
+        /// Provide button img path
+        /// </summary>
+        public BodyButton(string filePath) : base(filePath)
+        {
+        }
+        protected override void onMouseUp()
+        {
+            base.onMouseUp();
+            MyApp.instance.SetState(State.Main);
+        }
+        protected override void onMouseDown()
+        {
+            base.onMouseDown();
+            sound.Play();
+        }
+    }
+    public class AddtoListButton : Button
+    {
+        // Button hover sound
+        Sound sound = new Sound("sfx/dirt.wav");
+        /// <summary>
+        /// Provide button img path
+        /// </summary>
+        public AddtoListButton(string filePath) : base(filePath)
+        {
+        }
+        protected override void onMouseUp()
+        {
+            base.onMouseUp();
+        }
+        protected override void onMouseDown()
+        {
+            base.onMouseDown();
+            sound.Play();
+        }
+    }
+    public class HomeButton : Button
+    {
+        // Button hover sound
+        Sound sound = new Sound("sfx/dirt.wav");
+        /// <summary>
+        /// Provide button img path
+        /// </summary>
+        public HomeButton(string filePath) : base(filePath)
+        {
+        }
+        protected override void onMouseUp()
+        {
+            base.onMouseUp();
+            
+            MyApp.instance.SetState(State.Main);
+        }
+        protected override void onMouseDown()
+        {
+            base.onMouseDown();
+            sound.Play();
+        }
+    }
+    public class ListButton : Button
+    {
+        // Button hover sound
+        Sound sound = new Sound("sfx/dirt.wav");
+        /// <summary>
+        /// Provide button img path
+        /// </summary>
+        public ListButton(string filePath) : base(filePath)
+        {
+        }
+        protected override void onMouseUp()
+        {
+            base.onMouseUp();
+            MyApp.instance.SetState(State.List);
+        }
+        protected override void onMouseDown()
+        {
+            base.onMouseDown();
+            sound.Play();
+        }
+    }
+    public class AboutButton : Button
+    {
+        // Button hover sound
+        Sound sound = new Sound("sfx/dirt.wav");
+        /// <summary>
+        /// Provide button img path
+        /// </summary>
+        public AboutButton(string filePath) : base(filePath)
+        {
+        }
+        protected override void onMouseUp()
+        {
+            base.onMouseUp();
+            MyApp.instance.SetState(State.About);
+        }
+        protected override void onMouseDown()
+        {
+            base.onMouseDown();
+            sound.Play();
+        }
+    }
+
 }
 

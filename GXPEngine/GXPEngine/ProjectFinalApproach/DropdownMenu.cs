@@ -13,6 +13,8 @@ namespace GXPEngine.ProjectFinalApproach
         // Flag
         bool droppedDown = false;
 
+        Sound sound = new Sound("sfx/dirt.wav");
+
         /// <summary>
         /// Provide menu button filepath, create menu buttons, fill the array with buttons, position menu buttons
         /// </summary>
@@ -20,20 +22,18 @@ namespace GXPEngine.ProjectFinalApproach
         public DropdownMenu(String filePath) : base(filePath)
         {
             // Create Buttons
-            var menuButton1 = new DefaultButton("images/default.png");
-            var menuButton2 = new DefaultButton("images/default.png");
-            var menuButton3 = new DefaultButton("images/default.png");
-            var menuButton4 = new DefaultButton("images/default.png");
+            var menuButton1 = new ListButton("images/buttons/exerciseListButton.png");
+            var menuButton2 = new HomeButton("images/buttons/homeButton.png");
+            var menuButton3 = new AboutButton("images/buttons/aboutButton.png");
 
             // Fill array
-            buttons = new Button[] {menuButton1, menuButton2, menuButton3, menuButton4};
+            buttons = new Button[] {menuButton1, menuButton2, menuButton3};
 
             // Position buttons
             SetXY(this.width * 0.5f, this.height * 0.5f);
-            buttons[0].SetXY(buttons[0].width * 0.5f - this.width * 0.5f, this.height * 1.5f);
-            buttons[1].SetXY(buttons[0].width * 0.5f - this.width * 0.5f, this.height * 1.5f + buttons[0].height);
-            buttons[2].SetXY(buttons[0].width * 0.5f - this.width * 0.5f, this.height * 1.5f + buttons[0].height * 2);
-            buttons[3].SetXY(buttons[0].width * 0.5f - this.width * 0.5f, this.height * 1.5f + buttons[0].height * 3);
+            buttons[0].SetXY(buttons[0].width * 0.5f - this.width * 0.5f, this.height - 25);
+            buttons[1].SetXY(buttons[0].width * 0.5f - this.width * 0.5f, this.height + buttons[0].height - 20);
+            buttons[2].SetXY(buttons[0].width * 0.5f - this.width * 0.5f, this.height + buttons[0].height * 2 - 15);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace GXPEngine.ProjectFinalApproach
         public void DropMenu()
         {
             // AddChild array members
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 AddChild(buttons[i]);
             }
@@ -57,7 +57,7 @@ namespace GXPEngine.ProjectFinalApproach
         public void CloseMenu()
         {
             // RemoveChild array members
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 RemoveChild(buttons[i]);
             }
@@ -69,15 +69,20 @@ namespace GXPEngine.ProjectFinalApproach
         /// <summary>
         /// Open/Close menu on left mouse click
         /// </summary>
-        protected override void onMouseDown()
+        protected override void onMouseUp()
         {
-            base.onMouseDown();
+            base.onMouseUp();
             if (!droppedDown) DropMenu();
             else
             {
                 CloseMenu();
                 
             }
+        }
+        protected override void onMouseDown()
+        {
+            base.onMouseDown();
+            sound.Play();
         }
     }
 }

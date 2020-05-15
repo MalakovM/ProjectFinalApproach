@@ -36,13 +36,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProjectFinalApproach\Buttons\Button.cs" />
+    <Compile Include="ProjectFinalApproach\Button.cs" />
     <Compile Include="ProjectFinalApproach\Buttons\ButtonList.cs" />
-    <Compile Include="ProjectFinalApproach\Buttons\ButtonsExampleApplication.cs" />
+    <Compile Include="ProjectFinalApproach\Additional\ButtonsExampleApplication.cs" />
     <Compile Include="ProjectFinalApproach\ColorMapSprite.cs" />
     <Compile Include="ProjectFinalApproach\DropdownMenu.cs" />
     <Compile Include="ProjectFinalApproach\MyApp.cs" />
-    <Compile Include="ProjectFinalApproach\ProjectFinalApproach.cs" />
+    <Compile Include="ProjectFinalApproach\Additional\ProjectFinalApproach.cs" />
     <Compile Include="GXPEngine\Canvas.cs" />
     <Compile Include="GXPEngine\Game.cs" />
     <Compile Include="GXPEngine\GameObject.cs" />
@@ -81,10 +81,22 @@
     <Compile Include="GXPEngine\SoLoud\Soloud.cs" />
     <Compile Include="GXPEngine\SoLoud\SoloudSoundSystem.cs" />
     <Compile Include="ProjectFinalApproach\Scene.cs" />
-    <Compile Include="ProjectFinalApproach\Scenes\BackScene.cs" />
-    <Compile Include="ProjectFinalApproach\Scenes\ChestInfoScene.cs" />
-    <Compile Include="ProjectFinalApproach\Scenes\ChestScene.cs" />
-    <Compile Include="ProjectFinalApproach\Scenes\HomeScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\AboutScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\AbdomenScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\BackScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\BicepsScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\CalfsScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\HamstringsScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\TrapsScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\TricepsScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\ListScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\muscleInfo\AbdomenInfoScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\muscleInfo\ChestInfoScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\ChestScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\ForearmsScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\HomeScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\QuadsScene.cs" />
+    <Compile Include="ProjectFinalApproach\Scenes\body\ShouldersScene.cs" />
   </ItemGroup>
   <ItemGroup />
 </Project>

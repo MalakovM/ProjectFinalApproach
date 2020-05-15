@@ -7,30 +7,92 @@ using GXPEngine.ProjectFinalApproach;
 using GXPEngine.ProjectFinalApproach.Scenes;
 using System.Runtime.ExceptionServices;
 
+public enum State
+{
+    Main,
+    Chest,
+    ChestInfo,
+    Shoulders,
+    ShouldersInfo,
+    Quads,
+    QuadsInfo,
+    Forearms,
+    ForearmsInfo,
+    Biceps,
+    BicepsInfo,
+    Abdomen,
+    AbdomenInfo,
+    Triceps,
+    TricepsInfo,
+    Traps,
+    TrapsInfo,
+    Hamstrings,
+    HamstringsInfo,
+    Calfs,
+    CalfsInfo,
+    About,
+    List
+}
+
+public enum Type
+{
+    Front,
+    Back
+}
+
 namespace GXPEngine.ProjectFinalApproach
 {
-     public class MyApp : Game
+    public class MyApp : Game
     {
-        Scene targetScene;
-        static Scene mainScene;
-        
-        HomeScene homeScene;
-        ChestScene chestScene;
-        BackScene backScene;
-        ChestInfoScene chestInfoScene;
+        private Scene targetScene;
 
-        public static String state = "Main";
-        public static bool turned = false;
+        private AbdomenScene abdomenScene;
+        private AbdomenInfoScene abdomenInfoScene;
+        private BackScene backScene;
+        private BicepsScene bicepsScene;
+        private ChestScene chestScene;
+        private ForearmsScene forearmsScene;
+        private HomeScene homeScene;
+        private QuadsScene quadsScene;
+        private ShouldersScene shouldersScene;
+        private ChestInfoScene chestInfoScene;
+        private TricepsScene tricepsScene;
+        private TrapsScene trapsScene;
+        private HamstringsScene hamstringsScene;
+        private CalfsScene calfsScene;
+        private AboutScene aboutScene;
+        private ListScene listScene;
 
+
+        public bool turned = true;
+
+        // Singleton
+        public static MyApp instance;
+
+        public Type type = Type.Front;
 
         public MyApp() : base(1920, 1080, false, false)
         {
-            homeScene = new HomeScene();
-            chestScene = new ChestScene();
+            MyApp.instance = this;
+
+            abdomenScene = new AbdomenScene();
+            abdomenInfoScene = new AbdomenInfoScene();
             backScene = new BackScene();
+            bicepsScene = new BicepsScene();
+            chestScene = new ChestScene();
+            forearmsScene = new ForearmsScene();
+            homeScene = new HomeScene();
+            quadsScene = new QuadsScene();
+            shouldersScene = new ShouldersScene();
             chestInfoScene = new ChestInfoScene();
-            mainScene = homeScene;
-            targetScene = mainScene;
+            tricepsScene = new TricepsScene();
+            trapsScene = new TrapsScene();
+            hamstringsScene = new HamstringsScene();
+            calfsScene = new CalfsScene();
+            aboutScene = new AboutScene();
+            listScene = new ListScene();
+
+            SetState(State.Main);
         }
 
         static void Main()
@@ -38,89 +100,91 @@ namespace GXPEngine.ProjectFinalApproach
             MyApp myApp = new MyApp();
             myApp.Start();
         }
+
+        public void SetState(State state)
+        {
+            // Remove scene objects
+            if (targetScene != null)
+                targetScene.objects.ForEach(each => RemoveChild(each));
+
+            // Set target scene
+            if (type == Type.Front)
+            {
+                switch (state)
+                {
+                    case State.Main:
+                        targetScene = homeScene;
+                        break;
+                    case State.Chest:
+                        targetScene = chestScene;
+                        break;
+                    case State.Abdomen:
+                        targetScene = abdomenScene;
+                        break;
+                    case State.Biceps:
+                        targetScene = bicepsScene;
+                        break;
+                    case State.Forearms:
+                        targetScene = forearmsScene;
+                        break;
+                    case State.Quads:
+                        targetScene = quadsScene;
+                        break;
+                    case State.Shoulders:
+                        targetScene = shouldersScene;
+                        break;
+                    case State.ChestInfo:
+                        targetScene = chestInfoScene;
+                        break;
+                    case State.AbdomenInfo:
+                        targetScene = abdomenInfoScene;
+                        break;
+                    case State.About:
+                        targetScene = aboutScene;
+                        break;
+                    case State.List:
+                        targetScene = listScene;
+                        break;
+                }
+            }
+
+            else if (type == Type.Back)
+            {
+                switch (state)
+                {
+                    case State.Main:
+                        targetScene = backScene;
+                        break;
+                    case State.Triceps:
+                        targetScene = tricepsScene;
+                        break;
+                    case State.Traps:
+                        targetScene = trapsScene;
+                        break;
+                    case State.Hamstrings:
+                        targetScene = hamstringsScene;
+                        break;
+                    case State.Calfs:
+                        targetScene = calfsScene;
+                        break;
+                    case State.About:
+                        targetScene = aboutScene;
+                        break;
+                    case State.List:
+                        targetScene = listScene;
+                        break;
+                }
+            }
+
+
+            // Add scene objects
+            if (targetScene != null)
+                targetScene.objects.ForEach(each => AddChild(each));
+        }
+
         void Update()
         {
-            if (targetScene != null)
-            {
-                HandleState();
-                DrawScene();
-                //Console.WriteLine("State - " + state);
-                Console.WriteLine("targetScene - " + targetScene);
-            }
-        }
-     
-        public void DrawScene()
-        {
-            if (targetScene.objects == null)
-                return;
-            for (int i = 0; i < targetScene.objects.Count; i++)
-            {
-                if (targetScene.objects[i] != null)
-                {
-                    AddChild(targetScene.objects[i]);
-                }
-            }
-        }
-
-        public void CleanScene()
-        {
-            if (targetScene.objects == null)
-                return;
-            for (int i = 0; i < targetScene.objects.Count; i++)
-            {
-                if (targetScene.objects[i] != null)
-                {
-                    RemoveChild(targetScene.objects[i]);
-                }
-            }
-        }
-
-        public void HandleState()
-        {
-            switch (state)
-            {
-                case "Main":
-                    if (!turned)
-                    {
-                        CleanScene();
-                        targetScene = homeScene;
-                    }
-                    else
-                    {
-                        CleanScene();
-                        targetScene = backScene;
-                    }
-                    break;
-                case "Chest":
-                    CleanScene();
-                    targetScene = chestScene;
-                    break;
-                case "Abdomen":
-                    //CleanScene();
-                    //targetScene = abdomenScene;
-                    break;
-                case "Biceps":
-                    //CleanScene();
-                    //targetScene = bicepsScene;
-                    break;
-                case "Forearms":
-                    //CleanScene();
-                    //targetScene = foreamsScene;
-                    break;
-                case "Quads":
-                    //CleanScene();
-                    // targetScene = quadsScene;
-                    break;
-                case "Shoulders":
-                    //CleanScene();
-                    //targetScene = shouldersScene;
-                    break;
-                case "ChestInfo":
-                    CleanScene();
-                    targetScene = chestInfoScene;
-                    break;
-            }
-
+            Console.WriteLine(targetScene);
         }
     }
 }
